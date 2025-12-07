@@ -4,6 +4,21 @@
     <meta charset="UTF-8" />
     <title>Modern Business Layout</title>
     <link rel="stylesheet" href="./style.css" />
+    <script>
+      const lazyImages = document.querySelectorAll(".hero, .about-image");
+
+      lazyImages.forEach((img) => {
+        const temp = new Image();
+        temp.src = getComputedStyle(img).backgroundImage.replace(
+          /url\(|\)|"/g,
+          ""
+        );
+
+        temp.onload = () => {
+          img.classList.add("loaded");
+        };
+      });
+    </script>
   </head>
 
   <body>
