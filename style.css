@@ -1,0 +1,173 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e84e52;
+  padding: 15px 40px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* HERO SECTION */
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1751517298236-b9150faa3dfd?q=80&w=3132&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  padding: 120px 40px;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+/* ABOUT + IMAGE LAYOUT */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 380px;
+}
+
+.about-text {
+  padding: 40px;
+  background: #2c3e50;
+  color: white;
+}
+
+.about-text h2 {
+  margin-bottom: 20px;
+}
+
+.about-image {
+  background-image: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d");
+  background-size: cover;
+  background-position: center;
+}
+
+/* OFFER + WHY US */
+.bottom-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 180px;
+}
+
+.offer {
+  background: #f4c15d;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.offer button {
+  margin-top: 10px;
+  padding: 10px 18px;
+  font-weight: bold;
+  border: none;
+  background: #1c2c3f;
+  color: white;
+  cursor: pointer;
+}
+
+.why-us {
+  background: #31c0a3;
+  padding: 40px;
+  color: white;
+}
+
+.why-us li {
+  list-style: none;
+  margin: 5px 0;
+}
+
+/* ------------------------------
+   MOBILE RESPONSIVE DESIGN
+--------------------------------*/
+
+@media (max-width: 900px) {
+  /* NAV STACK */
+  nav ul {
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  /* ABOUT STACK */
+  .about-section {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image {
+    height: 250px;
+  }
+
+  /* BOTTOM STACK */
+  .bottom-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  .hero {
+    padding: 70px 20px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .offer,
+  .why-us {
+    padding: 20px;
+  }
+}
